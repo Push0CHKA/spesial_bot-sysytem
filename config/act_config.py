@@ -1,3 +1,7 @@
+# для авторизации
+simple = r'img/other/simple.png'
+login_box = r'img/auth/login_box.png'
+password_box = r'img/auth/password_box.png'
 # раличные действия (открытие вкладок и тд)
 page_up = r'img/action/page_up.png'
 open_my_page = r'img/action/my_page_button.png'
@@ -12,6 +16,7 @@ open_education = r'img/action/education.png'
 open_career = r'img/action/career.png'
 open_military_service = r'img/action/military_service.png'
 open_life_position = r'img/action/life_position.png'
+save_button = r'img/action/save_button.png'
 # поля личной информации из различных разделов
 # основное
 box_hometown = r'img/boxes/hometown.png'
@@ -25,6 +30,8 @@ box_favorite_books = r'img/boxes/favorite_books.png'
 box_favorite_games = r'img/boxes/favorite_games.png'
 box_favorite_quotes = r'img/boxes/favorite_quotes.png'
 box_about_me = r'img/boxes/about_me.png'
+# разное
+search_results = r'img/other/search_results.png'
 
 
 
