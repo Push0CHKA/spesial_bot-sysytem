@@ -23,7 +23,7 @@ text_data = ['text1', 'text2', 'text3', 'text4', 'text5', 'text6', 'text7', 'tex
 time.sleep(5)
 #tasks.find_and_open_group(group_name, dur_speed_from, dur_speed_to, typing_speed_from, typing_speed_to)
 #tasks.surf_and_like(surf_length, post_view_time, like_post_in_feed_probability_, dur_speed_from, dur_speed_to)
-#tasks.fill_main_data(boxes_data, text_data, dur_speed_from, dur_speed_to, typing_speed_from, typing_speed_to)
+#tasks.fill_main_data(boxes_data, dur_speed_from, dur_speed_to, typing_speed_from, typing_speed_to)
 
 #####
 #react.like_post(dur_speed_from, dur_speed_to)

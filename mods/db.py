@@ -4,13 +4,10 @@ import os
 
 
 def make_db(path, tname, fields):  # метод для создания бд
-    if os.path.isfile(path):
-        print(f' База данных {tname} в {path} уже существует')
-    else:
-        with sq.connect(f'{path}') as database:
-            database.cursor()
-            database.execute(f"""CREATE TABLE IF NOT EXISTS {tname}({fields})""")
-        print(f' База данных {tname} в {path} успешно создана')
+    with sq.connect(f'{path}') as database:
+        database.cursor()
+        database.execute(f"""CREATE TABLE IF NOT EXISTS {tname}({fields})""")
+    print(f' Таблица {tname} в {path} успешно создана')
 
 
 def crash_db(path):  # метод для удаления бд

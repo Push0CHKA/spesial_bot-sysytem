@@ -1,7 +1,12 @@
-from mods.imit import react,action
+from random import randint
+
+from mods.imit import react, action
+from mods.db import download
 from random import randint, uniform
 from time import sleep
 from config import act_config
+from config.db_config import users_main_data_path, users_main_data_tname
+
 import pyautogui as pag
 
 
@@ -37,7 +42,10 @@ def find_and_open_group(group_name, dur_speed_from, dur_speed_to, typing_speed_f
 
 
 # метод, реализующий заполнение основных данных о пользователе
-def fill_main_data(boxes_data, text_data, dur_speed_from, dur_speed_to, typing_speed_from, typing_speed_to):
+def fill_main_data(boxes_data, dur_speed_from, dur_speed_to, typing_speed_from, typing_speed_to):
+    users_main_data = download(users_main_data_path, users_main_data_tname)
+    random_num = randint(0, len(users_main_data) - 1)
+    users_main_data = users_main_data[random_num]
     action.move_and_click(act_config.open_my_page, dur_speed_from, dur_speed_to)
     sleep(randint(3, 5))
     action.move_and_click(act_config.open_edit, dur_speed_from, dur_speed_to)
@@ -48,8 +56,8 @@ def fill_main_data(boxes_data, text_data, dur_speed_from, dur_speed_to, typing_s
     for box in boxes_data:
         try:
             action.move_and_click(box, dur_speed_from, dur_speed_to)
-            action.print_text(text_data[cnt], typing_speed_from, typing_speed_to)
-            action.scroll_down(5)
+            action.print_text(users_main_data[cnt], typing_speed_from, typing_speed_to)
+            action.scroll_down(4)
             cnt += 1
         except:
             cnt += 1
