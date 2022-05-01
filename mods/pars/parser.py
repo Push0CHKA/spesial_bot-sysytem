@@ -17,6 +17,7 @@ def users_parser(token, group_id, offset):
                             })
     run_flag = False
     sub_list_data = []
+    print(sub_list.json())
     try:
         sub_list_data = sub_list.json()['response']['items']
         run_flag = True
@@ -46,6 +47,7 @@ def users_inf_parser(token, user_ids):
                                 'fields': user_fields
                             })
     run_flag = False
+    print(main_inf.json())
     # json
     try:
         main_inf = main_inf.json()['response']

@@ -2,7 +2,7 @@ from mods.pars import worker
 from mods.analys import users_analys
 from mods import diff
 
-token = 'ea5514cc4168826ca6a60f4227e37ebfb754f743154f1de717572c88aae0ce81b882a166ed719642d6a15'
+token = '82ffbdb0df02425669bcd1e09a7329d5bd32c7daefb867df525d9d75e3f086542e4462156aceaad07b414'
 groups_ids = [55206187]
 new_tipash = 'noviy_tipash_1'
 
@@ -12,5 +12,30 @@ new_tipash = 'noviy_tipash_1'
 diff.make_prob_db(new_tipash)
 users_analys.make_first_names_prob(new_tipash)
 users_analys.make_last_names_prob(new_tipash)
-
-
+users_analys.make_maiden_names_prob(new_tipash)
+users_analys.make_city_title_prob(new_tipash)
+users_analys.make_country_title_prob(new_tipash)
+users_analys.make_bdate_prob(new_tipash)
+users_analys.make_occupation_name_prob(new_tipash)
+users_analys.make_occupation_type_prob(new_tipash)
+users_analys.make_education_university_name_prob(new_tipash)
+users_analys.make_education_form_prob(new_tipash)
+users_analys.make_home_town_prob(new_tipash)
+users_analys.make_school_name_prob(new_tipash)
+users_analys.make_school_type_prob(new_tipash)
+users_analys.make_school_year_graduated_prob(new_tipash)
+users_analys.make_personal_langs_prob(new_tipash)
+users_analys.make_personal_life_main_prob(new_tipash)
+users_analys.make_personal_people_main_prob(new_tipash)
+users_analys.make_personal_alcohol_prob(new_tipash)
+users_analys.make_personal_smoking_prob(new_tipash)
+users_analys.make_personal_political_prob(new_tipash)
+users_analys.make_personal_religion_prob(new_tipash)
+users_analys.make_is_closed_prob(new_tipash)
+users_analys.make_main_fields(new_tipash)
+users_analys.make_counter_albums(new_tipash)
+users_analys.make_counter_videos(new_tipash)
+users_analys.make_counter_audios(new_tipash)
+users_analys.make_counter_photos(new_tipash)
+users_analys.make_counter_friends(new_tipash)
+users_analys.make_counter_groups(new_tipash)

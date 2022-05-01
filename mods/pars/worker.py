@@ -27,6 +27,7 @@ def download_users_ids(token, group_ids):
                 'v': version
             })
         run_flag = False
+        print(data.json())
         try:
             sub_count = int(data.json()['response']['count'])
             run_flag = True
