@@ -17,6 +17,7 @@ open_career = r'img/action/career.png'
 open_military_service = r'img/action/military_service.png'
 open_life_position = r'img/action/life_position.png'
 save_button = r'img/action/save_button.png'
+close_button = r'img/action/close_button.png'
 # поля личной информации из различных разделов
 # основное
 box_hometown = r'img/boxes/hometown.png'
@@ -32,6 +33,15 @@ box_favorite_quotes = r'img/boxes/favorite_quotes.png'
 box_about_me = r'img/boxes/about_me.png'
 # разное
 search_results = r'img/other/search_results.png'
+search_friends = r'img/other/search_friends.png'
+back_page = r'img/other/back.png'
+line = r'img/other/line.png'
+results = r'img/other/results.png'
+
+
+boxes_data = [box_activities, box_interests, box_favorite_music,
+              box_favorite_films, box_favorite_tv, box_favorite_books,
+              box_favorite_games, box_favorite_quotes, box_about_me]
 
 
 

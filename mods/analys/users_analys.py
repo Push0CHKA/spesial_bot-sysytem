@@ -9,14 +9,9 @@ from config.db_config import users_data_db_path, users_data_db_tname, prob_db_pa
     prob_personal_religion_db_tname, prob_personal_smoking_db_tname, prob_is_closed_db_tname, prob_main_fields_db_tname, \
     prob_counter_albums_db_tname, prob_counter_video_db_tname, prob_counter_audios_db_tname, \
     prob_counter_photos_db_tname, prob_counter_friends_db_tname, prob_counter_groups_db_tname
-from mods import db
 
 
-usrdata = db.download(users_data_db_path, users_data_db_tname)
-rows_cnt = len(usrdata)
-
-
-def make_first_names_prob(new_user_type_name):
+def make_first_names_prob(new_user_type_name, rows_cnt):
     """
         Метод для составления таблицы вероятности имен
     """
@@ -66,7 +61,7 @@ def make_first_names_prob(new_user_type_name):
                               (labels[i], probability[i],))
 
 
-def make_last_names_prob(new_user_type_name):
+def make_last_names_prob(new_user_type_name, rows_cnt):
     """
             Метод для составления таблицы вероятности фамилий
     """
@@ -116,7 +111,7 @@ def make_last_names_prob(new_user_type_name):
                               (labels[i], probability[i],))
 
 
-def make_maiden_names_prob(new_user_type_name):
+def make_maiden_names_prob(new_user_type_name, rows_cnt):
     """
             Метод для составления таблицы вероятности девичьих фамилий
     """
@@ -150,7 +145,7 @@ def make_maiden_names_prob(new_user_type_name):
                               (labels[i], probability[i],))
 
 
-def make_city_title_prob(new_user_type_name):
+def make_city_title_prob(new_user_type_name, rows_cnt):
     """
             Метод для составления таблицы вероятности названий городов
     """
@@ -181,7 +176,7 @@ def make_city_title_prob(new_user_type_name):
                               (labels[i], probability[i],))
 
 
-def make_country_title_prob(new_user_type_name):
+def make_country_title_prob(new_user_type_name, rows_cnt):
     """
         Распределение названия стран
     """
@@ -212,7 +207,7 @@ def make_country_title_prob(new_user_type_name):
                               (labels[i], probability[i],))
 
 
-def make_bdate_prob(new_user_type_name):
+def make_bdate_prob(new_user_type_name, rows_cnt):
     """
         Распределение дат рождения
     """
@@ -243,7 +238,7 @@ def make_bdate_prob(new_user_type_name):
                               (labels[i], probability[i],))
 
 
-def make_occupation_name_prob(new_user_type_name):
+def make_occupation_name_prob(new_user_type_name, rows_cnt):
     """
         Распределение названий занятости
     """
@@ -274,7 +269,7 @@ def make_occupation_name_prob(new_user_type_name):
                               (labels[i], probability[i],))
 
 
-def make_occupation_type_prob(new_user_type_name):
+def make_occupation_type_prob(new_user_type_name, rows_cnt):
     """
         Распределение типов занятости
     """
@@ -305,7 +300,7 @@ def make_occupation_type_prob(new_user_type_name):
                               (labels[i], probability[i],))
 
 
-def make_education_university_name_prob(new_user_type_name):
+def make_education_university_name_prob(new_user_type_name, rows_cnt):
     """
         Распределение названий университетов
     """
@@ -336,7 +331,7 @@ def make_education_university_name_prob(new_user_type_name):
                               (labels[i], probability[i],))
 
 
-def make_education_form_prob(new_user_type_name):
+def make_education_form_prob(new_user_type_name, rows_cnt):
     """
         Распределение форм обучений
     """
@@ -367,7 +362,7 @@ def make_education_form_prob(new_user_type_name):
                               (labels[i], probability[i],))
 
 
-def make_home_town_prob(new_user_type_name):
+def make_home_town_prob(new_user_type_name, rows_cnt):
     """
         Название родного города
     """
@@ -398,7 +393,7 @@ def make_home_town_prob(new_user_type_name):
                               (labels[i], probability[i],))
 
 
-def make_school_name_prob(new_user_type_name):
+def make_school_name_prob(new_user_type_name, rows_cnt):
     """
         Название школы
     """
@@ -429,7 +424,7 @@ def make_school_name_prob(new_user_type_name):
                               (labels[i], probability[i],))
 
 
-def make_school_type_prob(new_user_type_name):
+def make_school_type_prob(new_user_type_name, rows_cnt):
     """
         Тип школы
     """
@@ -460,7 +455,7 @@ def make_school_type_prob(new_user_type_name):
                               (labels[i], probability[i],))
 
 
-def make_school_year_graduated_prob(new_user_type_name):
+def make_school_year_graduated_prob(new_user_type_name, rows_cnt):
     """
         Распределение по годам выпуска со школ
     """
@@ -492,7 +487,7 @@ def make_school_year_graduated_prob(new_user_type_name):
                               (labels[i], probability[i],))
 
 
-def make_personal_alcohol_prob(new_user_type_name):
+def make_personal_alcohol_prob(new_user_type_name, rows_cnt):
     """
          Распределение вероятностей отношения к алкоголю
     """
@@ -524,7 +519,7 @@ def make_personal_alcohol_prob(new_user_type_name):
                               (labels[i], probability[i],))
 
 
-def make_personal_langs_prob(new_user_type_name):
+def make_personal_langs_prob(new_user_type_name, rows_cnt):
     """
          Распределение вероятностей знания языков
     """
@@ -556,7 +551,7 @@ def make_personal_langs_prob(new_user_type_name):
                               (labels[i], probability[i],))
 
 
-def make_personal_life_main_prob(new_user_type_name):
+def make_personal_life_main_prob(new_user_type_name, rows_cnt):
     """
          Распределение вероятностей самое важное в жизни
     """
@@ -588,7 +583,7 @@ def make_personal_life_main_prob(new_user_type_name):
                               (labels[i], probability[i],))
 
 
-def make_personal_people_main_prob(new_user_type_name):
+def make_personal_people_main_prob(new_user_type_name, rows_cnt):
     """
          Распределение вероятностей самое важное в людях
     """
@@ -620,7 +615,7 @@ def make_personal_people_main_prob(new_user_type_name):
                               (labels[i], probability[i],))
 
 
-def make_personal_political_prob(new_user_type_name):
+def make_personal_political_prob(new_user_type_name, rows_cnt):
     """
          Распределение вероятностей самое важное в людях
     """
@@ -652,7 +647,7 @@ def make_personal_political_prob(new_user_type_name):
                               (labels[i], probability[i],))
 
 
-def make_personal_religion_prob(new_user_type_name):
+def make_personal_religion_prob(new_user_type_name, rows_cnt):
     """
          Распределение вероятностей религий
     """
@@ -684,7 +679,7 @@ def make_personal_religion_prob(new_user_type_name):
                               (labels[i], probability[i],))
 
 
-def make_personal_smoking_prob(new_user_type_name):
+def make_personal_smoking_prob(new_user_type_name, rows_cnt):
     """
          Распределение вероятностей религий
     """
@@ -716,7 +711,7 @@ def make_personal_smoking_prob(new_user_type_name):
                               (labels[i], probability[i],))
 
 
-def make_is_closed_prob(new_user_type_name):
+def make_is_closed_prob(new_user_type_name, rows_cnt):
     """
          Распределение вероятностей закрытости страницы
     """

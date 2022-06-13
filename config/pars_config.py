@@ -1,6 +1,8 @@
 """
     Параметры для парсинга пользователей
 """
+# токен вк
+token = '82ffbdb0df02425669bcd1e09a7329d5bd32c7daefb867df525d9d75e3f086542e4462156aceaad07b414'
 # поля для парсинга
 user_fields = 'photo_id,sex,bdate,city,country,home_town,has_photo,photo_max_orig,domain,has_mobile, contacts,site,' \
               'education,universities,schools,status,followers_count,common_count,occupation,nickname,relatives,' \

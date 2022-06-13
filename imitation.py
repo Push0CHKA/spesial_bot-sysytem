@@ -29,6 +29,9 @@ time.sleep(5)
 #react.like_post(dur_speed_from, dur_speed_to)
 #react.like_comment(dur_speed_from, dur_speed_to)
 comment = 'comment'
+
+#pag.screenshot('a.png')
+tasks.surf_friends(1, 10, 1, False, False, False, dur_speed_from, dur_speed_to)
 #react.comment_post(comment, dur_speed_from, dur_speed_to, typing_speed_from, typing_speed_to)
 #react.comment_comment(comment, dur_speed_from, dur_speed_to, typing_speed_from, typing_speed_to)
 #react.repost_to_wall(dur_speed_from, dur_speed_to, typing_speed_from, typing_speed_to, comment)

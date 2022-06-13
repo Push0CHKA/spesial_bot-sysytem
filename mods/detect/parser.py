@@ -1,10 +1,13 @@
+import os
+
 import requests
 from config import db_config, pars_config
 from mods import db
 
 
-def download_main_data(user_ids, token, friend_flag=False):
-    if not friend_flag:
+def download_main_data(user_ids, token, friend_id=-1):
+    all_data = []
+    if not os.path.exists(db_config.main_db_path):
         db.make_db(db_config.main_db_path, db_config.main_db_tname, db_config.main_db_fields)
     main_inf = requests.get('https://api.vk.com/method/users.get',
                             params={
@@ -377,10 +380,13 @@ def download_main_data(user_ids, token, friend_flag=False):
                 li.append(str(data['is_closed']))
             else:
                 li.append('')
-            if friend_flag:
-                return li
+            if friend_id != -1:
+                li.insert(0, friend_id)
+                all_data.append(li)
             else:
                 db.loading([li], db_config.main_db_path, db_config.main_db_tname)
+    if friend_id != -1:
+        db.loading(all_data, db_config.friends_db_path, db_config.friends_db_tname)
 
 
 def download_friends_data(user_id, token):
@@ -394,9 +400,7 @@ def download_friends_data(user_id, token):
     if friends_list_inf.status_code == 200:
         friends_list_data = friends_list_inf.json()['response']['items']
         for friend_id in friends_list_data:
-            data = download_main_data(friend_id, token, friend_flag=True)
-            data.insert(0, user_id)
-            db.loading([data], db_config.friends_db_path, db_config.friends_db_tname)
+            download_main_data(user_ids=friend_id, token=token, friend_id=user_id)
 
 
 def download_wall_data(user_id, token):

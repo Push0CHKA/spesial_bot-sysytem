@@ -256,6 +256,10 @@ prob_counter_friends_db_fields = 'id INTEGER PRIMARY KEY, counter_friends TEXT, 
 prob_counter_groups_db_tname  = 'counter_groups'
 prob_counter_groups_db_fields = 'id INTEGER PRIMARY KEY, counter_groups TEXT, probability TEXT'
 
+# комметарии
+comments_db_path = 'db/imit/comments/comments.db'
+comments_db_tname = 'comments'
+
 
 
 
